@@ -2,9 +2,10 @@
 # Pulse Secure Version Grabber 
 # 
 # brodsky@splunk.com 
-# 20 APR 2021
+# 21 APR 2021
 
-VERSION=0.1-SplunkUF
+VERSION=0.2-SplunkUF
+# 0.2 moves the text file to a lookup, thank you mnatkin@splunk.com
 
 # set a date format so we can output a date for each line
 DATETIME=$(date '+%Y-%m-%d %H:%M:%S %Z')
@@ -12,9 +13,10 @@ DATETIME=$(date '+%Y-%m-%d %H:%M:%S %Z')
 # what's the IP address of the machine?
 IPADD=$(hostname -I)
 
-IP_FILE="$SPLUNK_HOME/etc/apps/TA-pcsverchecker/bin/ips.txt" # The file with the IP addresses
+# where is the list of PCS Appliance IPs?
+IP_FILE="$SPLUNK_HOME/etc/apps/TA-pcsverchecker/lookups/appliance_ips.csv" # The file with the IP addresses
 if [[ ! -f ${IP_FILE} ]]; then
-   echo "No list of IP addresses found. Provide one-per-line text file called ips.txt in this directory."
+   echo "No list of IP addresses found. Update the appliance_ips.csv lookup file for this app."
    exit 1
 fi
 

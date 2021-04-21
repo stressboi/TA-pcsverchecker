@@ -2,7 +2,12 @@
 
 Simple Splunk UF scanning script to harvest versions of Pulse Secure Connect appliances via curl. Refer to https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44784/.
 
-This scripted input iterates through a local file of IP addresses (ips.txt) and sequentially pulls down the version information from each encountered Pulse Secure Connect appliance via curl. Please only include IP addresses of PCS appliances in the ip list.
+History:
+
+0.1: initial release
+0.2: moved the input file of appliances to a lookup, thank you mnatkin@splunk.com!
+
+This scripted input iterates through a local lookup of IP addresses (appliance_ips.csv) and sequentially pulls down the version information from each encountered Pulse Secure Connect appliance via curl. Please only include IP addresses of PCS appliances in the lookup.
 
 This can be used on any Splunk Universal Forwarder running on a Linux server or endpoint. 
 
