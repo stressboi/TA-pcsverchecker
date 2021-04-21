@@ -5,6 +5,7 @@ Simple Splunk UF scanning script to harvest versions of Pulse Secure Connect app
 History:
 
 0.1: initial release
+
 0.2: moved the input file of appliances to a lookup, thank you mnatkin@splunk.com!
 
 This scripted input iterates through a local lookup of IP addresses (appliance_ips.csv) and sequentially pulls down the version information from each encountered Pulse Secure Connect appliance via curl. Please only include IP addresses of PCS appliances in the lookup.
