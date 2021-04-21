@@ -12,7 +12,7 @@ DATETIME=$(date '+%Y-%m-%d %H:%M:%S %Z')
 # what's the IP address of the machine?
 IPADD=$(hostname -I)
 
-IP_FILE="ips.txt" # The file with the IP addresses
+IP_FILE="$SPLUNK_HOME/etc/apps/TA-pcsverchecker/bin/ips.txt" # The file with the IP addresses
 if [[ ! -f ${IP_FILE} ]]; then
    echo "No list of IP addresses found. Provide one-per-line text file called ips.txt in this directory."
    exit 1
