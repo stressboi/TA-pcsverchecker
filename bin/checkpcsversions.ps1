@@ -17,7 +17,7 @@ catch
 foreach($line in $inputfile)
 {
        $timevar = Get-Date -UFormat "%Y-%m-%d %H:%M:%S %Z"
-	   $curloutput = Invoke-Webrequest -UseBasicParsing -URI https://$line/stressboi/TA-pcsverchecker/main/sampleoutput.txt
+	   $curloutput = Invoke-Webrequest -UseBasicParsing -URI https://$line/dana-na/nc/nc_gina_ver.txt
 	   if($?){
 			
 			$splitoutput = $curloutput.Content -split "`n"
