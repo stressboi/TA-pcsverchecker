@@ -1,6 +1,6 @@
 # TA-pcsverchecker
 
-Simple Splunk UF scanning script to harvest versions of Pulse Secure Connect appliances via curl. Refer to https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44784/.
+Simple Splunk UF scanning scripts to harvest versions of Pulse Secure Connect appliances via web interface. Refer to https://kb.pulsesecure.net/articles/Pulse_Security_Advisories/SA44784/.
 
 History:
 
