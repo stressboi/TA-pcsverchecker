@@ -8,7 +8,7 @@ History:
 
 0.2: moved the input file of appliances to a lookup, thank you mnatkin@splunk.com!
 
-0.1 WINDOWS posted 22APR21!
+0.1 WINDOWS posted 22APR21 because someone kinda asked for it.
 
 This scripted input iterates through a local lookup of IP addresses (appliance_ips.csv) and sequentially pulls down the version information from each encountered Pulse Secure Connect appliance via curl. Please only include IP addresses of PCS appliances in the lookup.
 
